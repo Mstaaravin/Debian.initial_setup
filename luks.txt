@@ -1,0 +1,15 @@
+export FILE=/etc/keyfile
+
+# Add to /etc/cryptsetup-initramfs/conf-hook
+KEYFILE_PATTERN=/etc/$FILE
+UMASK=0077
+
+wget https://server/$FILE
+gpg -d -o $FILE $FILE.gpg
+
+# Add key to LUKS partition
+cryptsetup luksAddKey /dev/sda5 /etc/$FILE
+
+# Add key to /etc/crypttab
+sda5_crypt UUID=c6b3dee3-3fce-4f96-8a85-ede75d171fab /etc/$FILE luks,discard
+update-initramfs -u -k all

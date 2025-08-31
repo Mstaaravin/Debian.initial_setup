@@ -1,0 +1,1 @@
+apt install -y aptitude linux-headers-amd64 zfsutils-linux zfs-dkms zfs-zed

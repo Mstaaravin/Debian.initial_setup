@@ -1,0 +1,4 @@
+apt install -y gnome-brave-icon-theme shutter mozo deluge-gtk deluge keepassxc caja-open-terminal caja-actions caja-sendto fonts-ubuntu fonts-ubuntu-console fonts-ubuntu-title
+apt install -y obs-studio obs-ashmanix-blur-filter obs-advanced-scene-switcher obs-advanced-scene-switcher-data obs-3d-effect obs-cli obs-advanced-masks 
+apt install -y shotcut ffmpeg
+apt install -y cryfs chromium nextcloud-desktop caja-nextcloud mcomix unrar

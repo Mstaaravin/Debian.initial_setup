@@ -1,0 +1,11 @@
+modprobe vfio
+echo "# https://gist.github.com/nephest/c2d2c31417be545c3c6eef2cec0e796e" > /etc/modprobe.d/vfio.conf
+echo "# softdep noveau pre: vfio-pci" > /etc/modprobe.d/vfio.conf
+echo "# softdep snd_hda_intel pre: vfio-pci" > /etc/modprobe.d/vfio.conf
+echo "softdep e1000e pre: vfio-pci" > /etc/modprobe.d/vfio.conf
+echo "options vfio-pci ids=8086:15b8" > /etc/modprobe.d/vfio.conf
+echo "vfio-pci" >> /etc/modules
+echo "blacklist nouveau" > /etc/modprobe.d/blacklist.conf
+echo "blacklist e1000e" > /etc/modprobe.d/blacklist.conf
+update-initramfs -u -k all
+

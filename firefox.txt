@@ -1,0 +1,23 @@
+#!/bin/bash
+set -e
+
+# Crear directorio para llaves
+install -d -m 0755 /etc/apt/keyrings
+
+# Descargar y guardar la llave de Mozilla
+wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | sudo tee /etc/apt/keyrings/packages.mozilla.org.asc > /dev/null
+
+# Agregar el repositorio de Mozilla
+echo "deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://packages.mozilla.org/apt mozilla main" | \
+  sudo tee /etc/apt/sources.list.d/mozilla.list > /dev/null
+
+# Configurar preferencias para que priorice paquetes de Mozilla
+tee /etc/apt/preferences.d/mozilla > /dev/null <<'EOF'
+Package: *
+Pin: origin packages.mozilla.org
+Pin-Priority: 1000
+EOF
+
+# Actualizar índices de paquetes
+apt update
+apt install -y firefox

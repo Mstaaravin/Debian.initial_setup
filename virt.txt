@@ -1,0 +1,2 @@
+apt install -y libvirt-daemon libvirt-daemon-driver-storage-zfs virt-manager spice-vdagent spice-client-gtk
+usermod -aG libvirt cmiranda

@@ -1,0 +1,10 @@
+export VERSION=v0.18.0
+wget https://github.com/restic/restic/releases/download/$VERSION/restic_$VERSION_linux_amd64.bz2 -o /tmp/restic_$VERSION_linux_amd64.bz2
+mkdir ~/.local/bin
+bunzip2 -dc /tmp/restic_$VERSION_linux_amd64.bz2 > ~/.local/bin/restic_$VERSION_linux_amd64
+chmod +x ~/.local/bin/restic_$VERSION_linux_amd64
+ln -s ~/.local/bin/restic_$VERSION_linux_amd64 ~/.local/bin/restic
+chmod +x ~/.local/bin/restic
+setcap cap_dac_read_search=+ep /usr/local/bin/restic
+export RESTIC_PASSWORD=
+
