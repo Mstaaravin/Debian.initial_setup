@@ -11,5 +11,5 @@ Signed-By: /etc/apt/keyrings/zabbly.asc
 
 EOF'
 apt update
-apt install incus -y
+apt install -y incus incus-agent incus-base incus-client incus-extra incus-ui-canonical openvswitch-switch
 usermod -aG incus cmiranda
