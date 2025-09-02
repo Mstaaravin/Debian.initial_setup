@@ -15,6 +15,7 @@ wget http://openwrt.lan/cloudflare.txt
 wget http://openwrt.lan/desktop.txt
 wget http://openwrt.lan/docker.txt
 wget http://openwrt.lan/firefox.txt
+wget http://openwrt.lan/brave.txt
 wget http://openwrt.lan/incus.txt
 wget http://openwrt.lan/luks.txt
 wget http://openwrt.lan/nvidia.txt
