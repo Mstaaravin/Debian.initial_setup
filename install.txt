@@ -10,17 +10,17 @@ sed -i 's|^#\?DNSOverTLS=.*|DNSOverTLS=no|' /etc/systemd/resolved.conf
 sed -i 's|^#\?ReadEtcHosts=.*|ReadEtcHosts=yes|' /etc/systemd/resolved.conf
 systemctl restart systemd-resolved
 echo "cmiranda ALL=NOPASSWD: ALL" > /etc/sudoers.d/cmiranda
-wget http://openwrt.lan/lhome01/etc/network/interfaces
-wget http://openwrt.lan/cloudflare.txt
-wget http://openwrt.lan/desktop.txt
-wget http://openwrt.lan/docker.txt
-wget http://openwrt.lan/firefox.txt
-wget http://openwrt.lan/brave.txt
-wget http://openwrt.lan/incus.txt
-wget http://openwrt.lan/luks.txt
-wget http://openwrt.lan/nvidia.txt
-wget http://openwrt.lan/restic.txt
-wget http://openwrt.lan/virt.txt
-wget http://openwrt.lan/zfs.txt
-wget http://openwrt.lan/vfio.txt
-wget http://openwrt.lan/lvm.txt
+wget http://ip.lan/lhome01/etc/network/interfaces
+wget http://ip.lan/cloudflare.txt
+wget http://ip.lan/desktop.txt
+wget http://ip.lan/docker.txt
+wget http://ip.lan/firefox.txt
+wget http://ip.lan/brave.txt
+wget http://ip.lan/incus.txt
+wget http://ip.lan/luks.txt
+wget http://ip.lan/nvidia.txt
+wget http://ip.lan/restic.txt
+wget http://ip.lan/virt.txt
+wget http://ip.lan/zfs.txt
+wget http://ip.lan/vfio.txt
+wget http://ip.lan/lvm.txt
