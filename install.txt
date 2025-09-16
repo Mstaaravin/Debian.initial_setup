@@ -23,4 +23,3 @@ wget http://ip.lan/restic.txt
 wget http://ip.lan/virt.txt
 wget http://ip.lan/zfs.txt
 wget http://ip.lan/vfio.txt
-wget http://ip.lan/lvm.txt
