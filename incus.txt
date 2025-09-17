@@ -13,3 +13,5 @@ EOF'
 apt update
 apt install -y incus incus-agent incus-base incus-client incus-extra incus-ui-canonical openvswitch-switch
 usermod -aG incus cmiranda
+usermod -aG incus-admin cmiranda
+# incus project switch default #as a user
