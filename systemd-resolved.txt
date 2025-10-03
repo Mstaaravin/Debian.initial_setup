@@ -1,0 +1,8 @@
+apt install systemd-resolved
+sed -i 's|^#\?DNS=.*|DNS=172.16.254.1|' /etc/systemd/resolved.conf
+sed -i 's|^#\?FallbackDNS=.*|FallbackDNS=172.16.254.2 1.1.1.1 8.8.8.8|' /etc/systemd/resolved.conf
+sed -i 's|^#\?Domains=.*|Domains=lan|' /etc/systemd/resolved.conf
+sed -i 's|^#\?DNSSEC=.*|DNSSEC=no|' /etc/systemd/resolved.conf
+sed -i 's|^#\?DNSOverTLS=.*|DNSOverTLS=no|' /etc/systemd/resolved.conf
+sed -i 's|^#\?ReadEtcHosts=.*|ReadEtcHosts=yes|' /etc/systemd/resolved.conf
+systemctl restart systemd-resolved
