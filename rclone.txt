@@ -1,3 +1,3 @@
 export VERSION=v1.71.1
-wget https://downloads.rclone.org/$VERSION/rclone-$VERSION-linux-amd64.deb -o /tmp/rclone-$VERSION-linux-amd64.deb
-apt install /tmp/rclone-$VERSION-linux-amd64.deb
+wget https://downloads.rclone.org/${VERSION}/rclone-$VERSION-linux-amd64.deb -O /tmp/rclone-${VERSION}-linux-amd64.deb
+apt install /tmp/rclone-${VERSION}-linux-amd64.deb
