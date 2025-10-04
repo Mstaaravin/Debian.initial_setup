@@ -1,5 +1,8 @@
+apt update
 apt install -y aptitude linux-headers-amd64 zfsutils-linux zfs-dkms zfs-zed
 modprobe zfs
 #	filter = [ "r|/dev/zd*|" ]
-sed -i '/# This configuration option has an automatic default value\./,+1 {/^[[:space:]]*# filter = \[ "a|\.\*|" \]$/a\        filter = [ "r|/dev/zd*|" ]}' /etc/lvm/lvm.conf
-
+sed -i '/# This configuration option has an automatic default value\.$/{ 
+    n
+    /^[[:space:]]*# filter = \[ "a|.*|" \]$/a\        filter = [ "r|/dev/zd*|" ]
+}' /etc/lvm/lvm.conf
