@@ -2,4 +2,4 @@ apt install -y gnome-brave-icon-theme shutter mozo deluge-gtk deluge keepassxc c
 apt install -y mate-tweak dconf-cli mesa-utils 
 apt install -y obs-studio obs-ashmanix-blur-filter obs-advanced-scene-switcher obs-advanced-scene-switcher-data obs-3d-effect obs-cli obs-advanced-masks 
 apt install -y shotcut ffmpeg
-apt install -y cryfs chromium nextcloud-desktop caja-nextcloud mcomix unrar
+apt install -y cryfs chromium nextcloud-desktop caja-nextcloud mcomix unrar-free
