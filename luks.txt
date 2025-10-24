@@ -7,7 +7,7 @@ wget http://ip.lan/${FILE}.gpg
 KEYFILE_PATTERN=/etc/${FILE}
 UMASK=0077
 
-gpg -d -o ${FILE} ${FILE}.gpg
+gpg -d -o /etc/${FILE} ${FILE}.gpg
 
 # Add key to LUKS partition
 cryptsetup luksAddKey /dev/${PARTITION} /etc/${FILE}
