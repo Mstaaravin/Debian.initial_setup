@@ -1,0 +1,38 @@
+#cloud-config
+timezone: America/Argentina/Buenos_Aires
+
+# incus launch images:debian/13/cloud lhome-docker01 -c security.nesting=true --config=user.user-data="$(cat ~/cloud-init/base.yml)"
+users:
+  - name: cmiranda
+    ssh-authorized-keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOmWoYmXFKdbDYqhTzxgAEyfXNuihMf8FpGlBN5uxF40 cmiranda@ed25519
+    sudo: ["ALL=(ALL) NOPASSWD:ALL"]
+    groups: sudo
+    shell: /bin/bash
+
+packages:
+  - aptitude
+  - wget
+  - rsync
+  - curl
+  - tmux
+  - vim
+  - nano
+  - sudo
+  - less
+  - gpg
+  - pbzip2
+  - htop
+  - whois
+  - git
+  - pigz
+  - tree
+  - apt-transport-https
+  - ca-certificates
+  - openssh-server
+
+runcmd:
+  - sed -i 's/^#force_color_prompt=yes/force_color_prompt=yes/' /etc/skel/.bashrc
+  - sed -i 's/\\\[\\033\[01;32m\\\]/\\\[\\033[01;36m\\\]/' /etc/skel/.bashrc
+  - cat /etc/skel/.bashrc > /root/.bashrc
+  - cat /etc/skel/.bashrc > /home/cmiranda/.bashrc
